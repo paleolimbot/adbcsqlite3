@@ -1,0 +1,14 @@
+Package: adbcsqlite3
+Title: 'Arrow' Database Connectivity ('ADBC') 'SQLite3' Driver
+Version: 0.0.0.9000
+Authors@R: 
+    person("Dewey", "Dunnington", , "dewey@dunnington.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-9415-4582"))
+Description: Provides an 'SQLite3' driver for 'Arrow' Database
+  Connectivity ('ADBC').
+License: Apache License (>= 2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    radbc
