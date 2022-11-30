@@ -12,3 +12,6 @@ unlink("src/sqlite", recursive = TRUE)
 fs::dir_copy(file.path(adbc_dir, "c/driver/sqlite"), "src")
 fs::file_copy(file.path(adbc_dir, "adbc.h"), "src/sqlite")
 fs::file_copy(file.path(adbc_dir, c("c/vendor/nanoarrow/nanoarrow.c", "c/vendor/nanoarrow/nanoarrow.h")), "src/sqlite")
+
+unlink("data-raw/adbc.zip")
+unlink(adbc_dir, recursive = TRUE)

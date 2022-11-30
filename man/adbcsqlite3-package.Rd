@@ -2,8 +2,6 @@
 % Please edit documentation in R/adbcsqlite3-package.R
 \docType{package}
 \name{adbcsqlite3-package}
-\alias{adbcsqlite3}
-\alias{adbcsqlite3-package}
 \title{adbcsqlite3: 'Arrow' Database Connectivity ('ADBC') 'SQLite3' Driver}
 \description{
 Provides an 'SQLite3' driver for 'Arrow' Database Connectivity ('ADBC').
