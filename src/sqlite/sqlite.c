@@ -158,10 +158,10 @@ AdbcStatusCode SqliteDatabaseRelease(struct AdbcDatabase* database,
 
 AdbcStatusCode SqliteConnectionNew(struct AdbcConnection* connection,
                                    struct AdbcError* error) {
-  if (connection->private_data) {
-    SetError(error, "AdbcConnectionNew: connection already allocated");
-    return ADBC_STATUS_INVALID_STATE;
-  }
+  // if (connection->private_data) {
+  //   SetError(error, "AdbcConnectionNew: connection already allocated");
+  //   return ADBC_STATUS_INVALID_STATE;
+  // }
 
   connection->private_data = malloc(sizeof(struct SqliteConnection));
   memset(connection->private_data, 0, sizeof(struct SqliteConnection));
