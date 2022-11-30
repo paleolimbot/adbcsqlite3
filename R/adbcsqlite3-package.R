@@ -35,27 +35,30 @@ radbc_database_init.adbcsqlite3_driver_sqlite3 <- function(driver, uri = ":memor
 }
 
 #' @export
-radbc_connection_init.adbcsqlite3_driver_sqlite3 <- function(database,
-                                                             adbc.connection.autocommit = NULL) {
+radbc_connection_init.adbcsqlite3_database <- function(database,
+                                                       adbc.connection.autocommit = NULL) {
+  options <- list(adbc.connection.autocommit = adbc.connection.autocommit)
   radbc::radbc_connection_init_default(
     database,
-    list(adbc.connection.autocommit = adbc.connection.autocommit),
+    options[!vapply(options, is.null, logical(1))],
     subclass = "adbcsqlite3_connection"
   )
 }
 
 #' @export
-radbc_statement_init.adbcsqlite3_driver_sqlite3 <- function(connection, stream,
-                                                            adbc.ingest.target_table = NULL,
-                                                            adbc.ingest.mode = NULL,
-                                                            adbc.sqlite.query.batch_rows = NULL) {
+radbc_statement_init.adbcsqlite3_connection <- function(connection, stream,
+                                                        adbc.ingest.target_table = NULL,
+                                                        adbc.ingest.mode = NULL,
+                                                        adbc.sqlite.query.batch_rows = NULL) {
+  options <- list(
+    adbc.ingest.target_table = adbc.ingest.target_table,
+    adbc.ingest.mode = adbc.ingest.mode,
+    adbc.sqlite.query.batch_rows = adbc.sqlite.query.batch_rows
+  )
+
   radbc::radbc_statement_init_default(
     connection,
-    list(
-      adbc.ingest.target_table = adbc.ingest.target_table,
-      adbc.ingest.mode = adbc.ingest.mode,
-      adbc.sqlite.query.batch_rows = adbc.sqlite.query.batch_rows
-    ),
+    options[!vapply(options, is.null, logical(1))],
     subclass = "adbcsqlite3_statement"
   )
 }
