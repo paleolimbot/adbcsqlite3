@@ -17,3 +17,4 @@ Suggests:
 Config/testthat/edition: 3
 URL: https://github.com/paleolimbot/adbcsqlite3
 BugReports: https://github.com/paleolimbot/adbcsqlite3/issues
+Remotes: paleolimbot/radbc

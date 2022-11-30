@@ -6,6 +6,14 @@
 \description{
 Provides an 'SQLite3' driver for 'Arrow' Database Connectivity ('ADBC').
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/paleolimbot/adbcsqlite3}
+  \item Report bugs at \url{https://github.com/paleolimbot/adbcsqlite3/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Dewey Dunnington \email{dewey@dunnington.ca} (\href{https://orcid.org/0000-0002-9415-4582}{ORCID})
 
