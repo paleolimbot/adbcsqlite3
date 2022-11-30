@@ -1,2 +1,2 @@
 PKG_CPPFLAGS=-I../src/sqlite
-
+PKG_LIBS=-lsqlite3
